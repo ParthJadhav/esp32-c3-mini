@@ -31,27 +31,22 @@
 
 */
 
-#include <stdint.h>
 #include "app_hal.h"
-
+#include <stdint.h>
 
 #ifdef USE_SDL
 // emulator with SDL
-int main(void){
+int main(void) {
 
-    hal_setup();
-    
-    hal_loop();
+  hal_setup();
 
-    return 0;
+  hal_loop();
+
+  return 0;
 };
 #else
 // esp32 hardware
-void setup(){
-    hal_setup();
-}
+void setup() { hal_setup(); }
 
-void loop(){
-    hal_loop();
-}
+void loop() { hal_loop(); }
 #endif
